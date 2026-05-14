@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joe Hutto | Portfolio</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            max-width: 600px; 
+            margin: 40px auto; 
+            padding: 20px;
+            background-color: #121212; 
+            color: #e0e0e0; 
+        }
+
+        header { text-align: center; margin-bottom: 20px; }
+        .subtitle { color: #50c878; font-weight: bold; }
+
+        nav { text-align: center; margin-bottom: 30px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        nav a { margin: 0 15px; text-decoration: none; color: #50c878; font-weight: bold; cursor: pointer; }
+
+        .card {
+            background: #1e1e1e; 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+        
+        .instructions {
+            background: #d1e9ff; 
+            padding: 15px;
+            border-radius: 8px;
+            color: #1a3a5f;
+            margin-bottom: 20px;
+        }
+
+        h2 { color: #50c878; margin-top: 0; }
+        
+        .btn {
+            display: inline-block;
+            background: #333;
+            color: #50c878;
+            padding: 8px 15px;
+            text-decoration: none;
+            border: 1px solid #50c878;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Joe Hutto</h1>
+        <div class="subtitle">First-Year Programmer</div>
+    </header>
+
+    <nav>
+        <a onclick="show('about')">About Me</a>
+        <a onclick="show('projects')">My Projects</a>
+    </nav>
+
+    <div id="about">
+        <div class="card">
+            <h2>About My Coding Journey</h2>
+            <p>Welcome! This is my <b>first year of coding</b>. This is a portfolio of some of my projects that I am showing.</p>
+            <p>I've loved seeing my ideas come to life on the screen. From my first sketch to school event animations, every project has been a new adventure!</p>
+        </div>
+    </div>
+
+    <div id="projects" class="hidden">
+        <div class="instructions">
+            <b>How to View:</b> Click "View Project," then look for the <b>Play Button ▶</b> at the top left of the p5.js editor to run the animation.
+        </div>
+
+        <div class="card">
+            <h2>My First Project</h2>
+            <p>My very first project in the p5.js editor!</p>
+            <a href="https://editor.p5js.org/joehutto/sketches/p_OfbOWoi" class="btn" target="_blank">View Project</a>
+        </div>
+
+        <div class="card">
+            <h2>SpongeBob Musical Animations</h2>
+            <p>Animations created for our school's production of the SpongeBob play.</p>
+            <a href="https://editor.p5js.org/joehutto/sketches/ZEn_cA17k" class="btn" target="_blank">Money Falling</a>
+            <a href="https://editor.p5js.org/joehutto/sketches/YhxI1XOYW" class="btn" target="_blank">Bubbles Animation</a>
+        </div>
+
+        <div class="card">
+            <h2>Tequila Visualizer</h2>
+            <p>A visual representation of the song "Tequila" by The Champs.</p>
+            <a href="https://editor.p5js.org/joehutto/sketches/4Dikv3cRl" class="btn" target="_blank">View Project</a>
+        </div>
+    </div>
+
+    <script>
+        function show(id) {
+            document.getElementById('about').className = (id === 'about' ? '' : 'hidden');
+            document.getElementById('projects').className = (id === 'projects' ? '' : 'hidden');
+        }
+    </script>
+
+</body>
+</html>
